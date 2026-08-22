@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded;
+}
+
+/* Terminal-style text */
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Glow effects */
+.glow-green {
+  text-shadow: 0 0 10px hsl(142, 71%, 45%, 0.5);
+}
+.glow-blue {
+  text-shadow: 0 0 10px hsl(250, 89%, 67%, 0.5);
+}
+.glow-red {
+  text-shadow: 0 0 10px hsl(0, 84%, 60%, 0.5);
+}
